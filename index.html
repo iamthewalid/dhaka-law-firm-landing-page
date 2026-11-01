@@ -1,0 +1,1741 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ঢাকা ল ফার্ম | আপনার ব্যবসার আইন সমাধান এক ঠিকানায়</title>
+<meta name="description" content="ট্রেড লাইসেন্স, কোম্পানি রেজিস্ট্রেশন, ট্রেডমার্ক, ট্যাক্স/ভ্যাট কনসালটেশন সহ সব আইনি সেবা এক জায়গায়। ১০+ বছরের অভিজ্ঞতা, সারা বাংলাদেশে সেবা। ফ্রি কনসালটেশন বুক করুন।">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@300;400;500;600;700;800&family=Baloo+Da+2:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+/* ============================================================
+   ROOT & RESET
+============================================================ */
+:root{
+  --cream:#FBF3E7;
+  --muted:rgba(251,243,231,.68);
+  --gold:#E9C98B;
+  --gold-2:#D9A94E;
+  --gold-deep:#B9852F;
+  --maroon:#7A1220;
+  --glass-bg:linear-gradient(150deg,rgba(255,255,255,.115),rgba(255,255,255,.035));
+  --glass-brd:rgba(255,255,255,.14);
+  --radius:22px;
+  --shadow:0 22px 55px rgba(0,0,0,.45);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:110px}
+body{
+  font-family:'Anek Bangla','Baloo Da 2',system-ui,sans-serif;
+  background:#100208;
+  color:var(--cream);
+  line-height:1.75;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit}
+
+/* ============================================================
+   BACKGROUND LAYERS
+============================================================ */
+.bg-layer{
+  position:fixed;inset:0;z-index:-3;
+  background:
+    radial-gradient(900px 620px at 8% -8%, rgba(122,18,32,.85), transparent 62%),
+    radial-gradient(820px 700px at 96% 6%, rgba(88,9,26,.75), transparent 62%),
+    radial-gradient(900px 800px at 50% 108%, rgba(64,4,18,.92), transparent 60%),
+    linear-gradient(180deg,#1a0409 0%,#120309 55%,#0b0207 100%);
+  background-attachment:fixed;
+}
+.orb{
+  position:fixed;border-radius:50%;filter:blur(90px);z-index:-2;pointer-events:none;opacity:.45;
+}
+.orb-1{width:420px;height:420px;background:#9c1a2c;top:-120px;left:-100px;animation:float1 16s ease-in-out infinite}
+.orb-2{width:380px;height:380px;background:#c9922f;bottom:6%;right:-140px;animation:float2 19s ease-in-out infinite}
+.orb-3{width:300px;height:300px;background:#5a0b1c;top:45%;left:45%;animation:float1 22s ease-in-out infinite reverse}
+
+@keyframes float1{0%,100%{transform:translate(0,0)}50%{transform:translate(60px,50px)}}
+@keyframes float2{0%,100%{transform:translate(0,0)}50%{transform:translate(-70px,-40px)}}
+
+/* ============================================================
+   UTILITIES
+============================================================ */
+.container{width:min(1180px,92%);margin-inline:auto}
+
+.glass{
+  background:var(--glass-bg);
+  border:1px solid var(--glass-brd);
+  backdrop-filter:blur(20px) saturate(150%);
+  -webkit-backdrop-filter:blur(20px) saturate(150%);
+  box-shadow:var(--shadow), inset 0 1px 0 rgba(255,255,255,.16);
+  border-radius:var(--radius);
+}
+
+.grad-gold{
+  background:linear-gradient(100deg,#F8E7BC,#E2B767 45%,#C9922F);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+.section{padding:clamp(60px,8vw,105px) 0;position:relative}
+
+.sec-head{text-align:center;max-width:780px;margin:0 auto clamp(34px,5vw,58px)}
+.sec-head h2{font-size:clamp(25px,4vw,42px);line-height:1.42;font-weight:700}
+.sec-head p{color:var(--muted);margin-top:14px;font-size:clamp(14.5px,1.5vw,16.5px)}
+
+.kick{
+  display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;
+  color:var(--gold);background:rgba(233,201,139,.1);
+  border:1px solid rgba(233,201,139,.28);
+  padding:7px 17px;border-radius:100px;margin-bottom:18px;
+  backdrop-filter:blur(10px);
+}
+
+/* BUTTONS */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 24px;border-radius:14px;font-weight:600;font-size:15px;
+  border:1px solid transparent;cursor:pointer;transition:.28s;
+  white-space:nowrap;line-height:1.4;
+}
+.btn i{font-size:15px}
+.btn-gold{
+  background:linear-gradient(135deg,#F5E0B0,#D9A94E 48%,#B9852F);
+  color:#2A0510;box-shadow:0 14px 34px rgba(212,163,74,.3);
+}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(212,163,74,.48)}
+.btn-glass{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  color:var(--cream);backdrop-filter:blur(10px);
+}
+.btn-glass:hover{background:rgba(255,255,255,.16);transform:translateY(-3px)}
+.btn-wa{
+  background:linear-gradient(135deg,#2ED573,#12A85A);color:#04240f;
+  box-shadow:0 14px 34px rgba(46,213,115,.28);
+}
+.btn-wa:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(46,213,115,.42)}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ============================================================
+   TOP ANNOUNCEMENT BAR
+============================================================ */
+.topbar{
+  background:linear-gradient(90deg,#7A1220,#B9852F,#7A1220);
+  background-size:200% 100%;
+  animation:shine 7s linear infinite;
+  text-align:center;font-size:13.5px;font-weight:600;color:#FFF6E4;
+  padding:9px 16px;letter-spacing:.2px;
+}
+@keyframes shine{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+
+/* ============================================================
+   HEADER / NAV
+============================================================ */
+.site-head{position:sticky;top:0;z-index:900;padding:14px 0;transition:.35s}
+.site-head.scrolled{padding:8px 0}
+
+.nav-wrap{
+  display:flex;align-items:center;gap:20px;
+  padding:10px 18px;border-radius:18px;position:relative;
+}
+
+.brand{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.brand-mark{
+  width:44px;height:44px;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(150deg,#F5E0B0,#C9922F);color:#3B0710;font-size:19px;
+  box-shadow:0 8px 22px rgba(201,146,47,.35);flex-shrink:0;
+}
+.brand-txt strong{display:block;font-size:17px;font-weight:700;line-height:1.25;letter-spacing:.2px}
+.brand-txt small{display:block;font-size:11.5px;color:var(--muted);line-height:1.3}
+
+.nav-links{display:flex;align-items:center;gap:6px;margin-left:auto}
+.nav-links a{
+  padding:9px 14px;border-radius:11px;font-size:14.5px;font-weight:500;
+  color:rgba(251,243,231,.82);transition:.25s;
+}
+.nav-links a:hover{background:rgba(255,255,255,.09);color:#fff}
+
+.nav-cta{display:flex;align-items:center;gap:10px}
+.nav-cta .btn{padding:11px 18px;font-size:14px}
+
+.nav-toggle{
+  display:none;width:42px;height:42px;border-radius:12px;place-items:center;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+  color:var(--cream);cursor:pointer;font-size:16px;
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+.hero{padding:clamp(34px,5vw,70px) 0 clamp(48px,7vw,90px);position:relative}
+.hero-grid{
+  display:grid;grid-template-columns:1.12fr .88fr;
+  gap:clamp(28px,5vw,58px);align-items:center;
+}
+
+.pill{
+  display:inline-flex;align-items:center;gap:10px;padding:8px 17px;border-radius:100px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  font-size:13.5px;color:#EED9B8;backdrop-filter:blur(12px);margin-bottom:24px;
+}
+.pill .dot{
+  width:8px;height:8px;border-radius:50%;background:#39D98A;
+  box-shadow:0 0 0 4px rgba(57,217,138,.18);animation:blink 1.8s infinite;
+}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+
+.hero h1{
+  font-size:clamp(31px,5.1vw,57px);
+  line-height:1.34;font-weight:700;letter-spacing:.2px;
+}
+.hero .lead{
+  font-size:clamp(15px,1.6vw,17.5px);color:var(--muted);
+  margin-top:20px;max-width:545px;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
+
+.hero-trust{
+  display:flex;align-items:center;gap:14px;margin-top:32px;
+  font-size:14px;color:var(--muted);flex-wrap:wrap;
+}
+.avatars{display:flex}
+.avatars span{
+  width:36px;height:36px;border-radius:50%;margin-left:-11px;
+  border:2px solid rgba(255,255,255,.25);
+  background:linear-gradient(135deg,#C9922F,#7A1220);
+  display:grid;place-items:center;font-size:13px;font-weight:700;color:#FFF3DD;
+}
+.avatars span:first-child{margin-left:0}
+.stars{color:#F2C14E;font-size:13px;letter-spacing:1px}
+
+/* HERO CARD */
+.hero-card{padding:26px;position:relative;overflow:hidden}
+.hero-card::before{
+  content:'';position:absolute;top:-60px;right:-60px;width:180px;height:180px;
+  background:radial-gradient(circle,rgba(233,201,139,.32),transparent 68%);
+  border-radius:50%;pointer-events:none;
+}
+.hc-head{display:flex;align-items:center;gap:14px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.1)}
+.hc-head h3{font-size:19px;font-weight:700;line-height:1.4}
+.hc-head p{font-size:12.5px;color:var(--muted);letter-spacing:.4px}
+.seal{
+  width:52px;height:52px;border-radius:16px;display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(150deg,rgba(245,224,176,.95),rgba(201,146,47,.85));
+  color:#3B0710;font-size:22px;
+  box-shadow:0 10px 26px rgba(201,146,47,.35);
+}
+
+.hc-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}
+.hc-stats div{
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09);
+  border-radius:14px;padding:12px 14px;text-align:center;
+}
+.hc-stats strong{display:block;font-size:19px;font-weight:700;color:#F6E3B4;line-height:1.3}
+.hc-stats span{font-size:11.5px;color:var(--muted);line-height:1.4}
+
+.hc-line{
+  display:flex;align-items:center;gap:13px;padding:13px 15px;border-radius:14px;
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);
+  margin-bottom:10px;transition:.28s;
+}
+.hc-line:hover{background:rgba(233,201,139,.13);border-color:rgba(233,201,139,.32);transform:translateX(4px)}
+.hc-line i{color:var(--gold);font-size:16px;width:20px;text-align:center}
+.hc-line small{display:block;font-size:11.5px;color:var(--muted);line-height:1.3}
+.hc-line strong{display:block;font-size:15px;font-weight:600;line-height:1.4;word-break:break-all}
+
+/* ============================================================
+   STATS STRIP
+============================================================ */
+.stats-strip{padding:0 0 clamp(40px,6vw,70px)}
+.strip-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  padding:26px 18px;gap:12px;text-align:center;
+}
+.strip-inner div{position:relative}
+.strip-inner div + div::before{
+  content:'';position:absolute;left:0;top:16%;height:68%;width:1px;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.18),transparent);
+}
+.strip-inner strong{display:block;font-size:clamp(21px,3vw,30px);font-weight:700;color:#F6E3B4;line-height:1.3}
+.strip-inner span{font-size:12.5px;color:var(--muted)}
+
+/* ============================================================
+   SERVICES
+============================================================ */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:18px}
+.svc-card{padding:26px 24px;transition:.35s;position:relative;overflow:hidden}
+.svc-card::after{
+  content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:radial-gradient(320px 180px at 100% 0%,rgba(233,201,139,.16),transparent 70%);
+  opacity:0;transition:.35s;
+}
+.svc-card:hover{transform:translateY(-7px);border-color:rgba(233,201,139,.38)}
+.svc-card:hover::after{opacity:1}
+.svc-ico{
+  width:54px;height:54px;border-radius:16px;display:grid;place-items:center;
+  background:linear-gradient(150deg,rgba(245,224,176,.22),rgba(201,146,47,.1));
+  border:1px solid rgba(233,201,139,.3);color:#F2D69B;font-size:20px;margin-bottom:18px;
+}
+.svc-card h3{font-size:18px;font-weight:700;line-height:1.45;margin-bottom:8px}
+.svc-card p{font-size:14px;color:var(--muted);line-height:1.75}
+.svc-link{
+  display:inline-flex;align-items:center;gap:7px;margin-top:16px;
+  font-size:13.5px;font-weight:600;color:var(--gold);
+}
+.svc-link i{transition:.3s;font-size:12px}
+.svc-card:hover .svc-link i{transform:translateX(5px)}
+
+.svc-card.cta-card{
+  background:linear-gradient(150deg,rgba(233,201,139,.2),rgba(122,18,32,.35));
+  border-color:rgba(233,201,139,.4);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.svc-card.cta-card h3{color:#F9ECCF}
+.svc-card.cta-card .btn{margin-top:16px;align-self:flex-start}
+
+/* SPECIAL SERVICES */
+.special-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.special{
+  display:flex;align-items:center;gap:15px;padding:19px 21px;transition:.32s;
+}
+.special:hover{transform:translateY(-5px);border-color:rgba(233,201,139,.38);background:rgba(233,201,139,.09)}
+.special .ico{
+  width:46px;height:46px;border-radius:13px;flex-shrink:0;display:grid;place-items:center;
+  background:linear-gradient(150deg,#F5E0B0,#C9922F);color:#3B0710;font-size:17px;
+  box-shadow:0 8px 20px rgba(201,146,47,.28);
+}
+.special h4{font-size:15.5px;font-weight:700;line-height:1.4}
+.special span{font-size:12.5px;color:var(--muted);line-height:1.4}
+
+/* ============================================================
+   WHY US
+============================================================ */
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:16px}
+.why-card{padding:24px 22px;display:flex;gap:15px;transition:.32s}
+.why-card:hover{transform:translateY(-6px);border-color:rgba(233,201,139,.35)}
+.why-card .ico{
+  width:48px;height:48px;border-radius:14px;flex-shrink:0;display:grid;place-items:center;
+  background:rgba(233,201,139,.14);border:1px solid rgba(233,201,139,.28);
+  color:#F2D69B;font-size:18px;
+}
+.why-card h4{font-size:16.5px;font-weight:700;margin-bottom:5px;line-height:1.45}
+.why-card p{font-size:13.5px;color:var(--muted);line-height:1.7}
+
+/* ============================================================
+   VIDEO SECTION
+============================================================ */
+.video-grid{display:grid;grid-template-columns:1fr .82fr;gap:clamp(28px,5vw,60px);align-items:center}
+.video-txt h2{font-size:clamp(25px,3.6vw,38px);line-height:1.42;font-weight:700;margin-bottom:16px}
+.video-txt p{color:var(--muted);font-size:15.5px;margin-bottom:22px}
+.vlist{list-style:none;display:grid;gap:13px;margin-bottom:28px}
+.vlist li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:rgba(251,243,231,.85)}
+.vlist i{color:#39D98A;margin-top:6px;font-size:14px}
+
+.reel-wrap{display:grid;place-items:center}
+.reel-frame{
+  width:100%;max-width:352px;aspect-ratio:9/16;overflow:hidden;
+  border-radius:26px;padding:6px;position:relative;
+  background:linear-gradient(160deg,rgba(233,201,139,.45),rgba(255,255,255,.06) 45%,rgba(122,18,32,.5));
+  box-shadow:0 30px 70px rgba(0,0,0,.6),0 0 60px rgba(201,146,47,.18);
+}
+.reel-frame iframe{
+  width:100%;height:100%;border:0;border-radius:21px;background:#0d0207;
+}
+
+/* ============================================================
+   FOUNDER
+============================================================ */
+.founder-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:clamp(28px,5vw,62px);align-items:center}
+.founder-photo{position:relative;padding:10px;border-radius:26px;overflow:hidden}
+.founder-photo img{
+  width:100%;aspect-ratio:4/4.6;object-fit:cover;object-position:top center;
+  border-radius:18px;filter:saturate(1.02) contrast(1.03);
+}
+.founder-photo::after{
+  content:'';position:absolute;inset:10px;border-radius:18px;pointer-events:none;
+  background:linear-gradient(180deg,transparent 55%,rgba(20,2,8,.75));
+}
+.photo-badge{
+  position:absolute;bottom:26px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,#F5E0B0,#C9922F);color:#3B0710;
+  font-size:12.5px;font-weight:700;padding:8px 18px;border-radius:100px;
+  white-space:nowrap;box-shadow:0 10px 26px rgba(0,0,0,.4);z-index:2;
+}
+
+.founder-txt h2{font-size:clamp(25px,3.6vw,38px);font-weight:700;line-height:1.4;margin-bottom:6px}
+.founder-txt .role{font-size:14.5px;color:var(--gold);font-weight:600;margin-bottom:24px}
+
+.quote{
+  position:relative;padding:24px 26px 24px 56px;border-radius:18px;
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11);
+  border-left:3px solid var(--gold-2);
+  font-size:16px;line-height:1.9;color:#F7EADA;font-style:normal;
+  backdrop-filter:blur(14px);margin-bottom:22px;
+}
+.quote::before{
+  content:'“';position:absolute;left:16px;top:6px;
+  font-family:Georgia,serif;font-size:60px;line-height:1;
+  color:rgba(233,201,139,.35);
+}
+.founder-txt > p{color:var(--muted);font-size:14.5px;line-height:1.85}
+.founder-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.founder-stats div{
+  padding:12px 20px;border-radius:14px;background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);text-align:center;
+}
+.founder-stats strong{display:block;font-size:19px;color:#F6E3B4;font-weight:700;line-height:1.3}
+.founder-stats span{font-size:11.5px;color:var(--muted)}
+
+/* ============================================================
+   COMPARISON
+============================================================ */
+.compare{padding:10px;overflow:hidden}
+.cmp-row{
+  display:grid;grid-template-columns:1fr 150px 150px;align-items:center;
+  padding:15px 20px;border-radius:13px;transition:.25s;
+}
+.cmp-row:nth-child(odd){background:rgba(255,255,255,.032)}
+.cmp-row:hover{background:rgba(233,201,139,.09)}
+.cmp-head{
+  background:rgba(255,255,255,.075)!important;border-radius:14px;
+  padding:17px 20px;font-weight:700;font-size:14.5px;
+}
+.cmp-head .us{
+  color:#2A0510;background:linear-gradient(135deg,#F5E0B0,#D9A94E);
+  padding:8px 10px;border-radius:10px;text-align:center;font-size:13.5px;
+}
+.cmp-head .them{color:var(--muted);text-align:center;font-size:13.5px}
+.cmp-label{font-size:14.5px;color:rgba(251,243,231,.9);padding-right:14px}
+.cmp-us{text-align:center;color:#39D98A;font-size:17px}
+.cmp-them{text-align:center;color:rgba(255,120,120,.72);font-size:17px}
+
+/* ============================================================
+   PROCESS
+============================================================ */
+.process-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:18px;counter-reset:step}
+.step{padding:28px 22px;position:relative;text-align:center;transition:.32s}
+.step:hover{transform:translateY(-6px);border-color:rgba(233,201,139,.35)}
+.step .num{
+  width:56px;height:56px;margin:0 auto 18px;border-radius:50%;
+  display:grid;place-items:center;font-size:20px;font-weight:700;
+  background:linear-gradient(150deg,#F5E0B0,#C9922F);color:#3B0710;
+  box-shadow:0 12px 30px rgba(201,146,47,.32);
+}
+.step h4{font-size:16.5px;font-weight:700;margin-bottom:7px;line-height:1.45}
+.step p{font-size:13.5px;color:var(--muted);line-height:1.7}
+
+/* ============================================================
+   TESTIMONIALS
+============================================================ */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.testi{padding:26px 24px;transition:.32s}
+.testi:hover{transform:translateY(-6px);border-color:rgba(233,201,139,.35)}
+.testi .stars{margin-bottom:13px;font-size:13px}
+.testi p{font-size:14.5px;line-height:1.85;color:rgba(251,243,231,.86);margin-bottom:20px}
+.testi-who{display:flex;align-items:center;gap:12px}
+.testi-who .av{
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(135deg,#C9922F,#7A1220);font-weight:700;color:#FFF3DD;font-size:15px;
+}
+.testi-who strong{display:block;font-size:14.5px;font-weight:700;line-height:1.4}
+.testi-who span{font-size:12px;color:var(--muted)}
+
+/* ============================================================
+   FAQ
+============================================================ */
+.faq-list{max-width:860px;margin:0 auto;display:grid;gap:12px}
+.faq-item{
+  border-radius:16px;overflow:hidden;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.11);
+  backdrop-filter:blur(14px);transition:.3s;
+}
+.faq-item[open]{background:rgba(233,201,139,.08);border-color:rgba(233,201,139,.32)}
+.faq-item summary{
+  list-style:none;cursor:pointer;padding:18px 52px 18px 22px;position:relative;
+  font-size:15.5px;font-weight:600;line-height:1.6;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:'\f078';font-family:'Font Awesome 6 Free';font-weight:900;
+  position:absolute;right:22px;top:50%;transform:translateY(-50%);
+  font-size:12px;color:var(--gold);transition:.3s;
+}
+.faq-item[open] summary::after{transform:translateY(-50%) rotate(180deg)}
+.faq-item p{padding:0 22px 20px;font-size:14.5px;line-height:1.85;color:var(--muted)}
+
+/* ============================================================
+   BOOKING
+============================================================ */
+.booking-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:0;overflow:hidden}
+.booking-left{padding:clamp(24px,3.4vw,38px);border-right:1px solid rgba(255,255,255,.1)}
+.booking-right{padding:clamp(24px,3.4vw,38px);background:rgba(0,0,0,.14)}
+.booking-left h3,.booking-right h3{font-size:19px;font-weight:700;margin-bottom:6px;line-height:1.45}
+.booking-left .sub{font-size:13px;color:var(--muted);margin-bottom:22px}
+
+.cal{border-radius:18px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);padding:16px;margin-bottom:24px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.cal-head span{font-size:15px;font-weight:700;color:#F6E3B4}
+.cal-nav{
+  width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  color:var(--cream);cursor:pointer;transition:.25s;font-size:12px;
+}
+.cal-nav:hover{background:rgba(233,201,139,.24);border-color:rgba(233,201,139,.4)}
+.cal-nav:disabled{opacity:.3;cursor:not-allowed}
+
+.cal-days,.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal-days span{text-align:center;font-size:11px;color:var(--muted);padding-bottom:6px;font-weight:600}
+.cal-grid button{
+  aspect-ratio:1;border-radius:10px;border:1px solid transparent;
+  background:rgba(255,255,255,.045);color:var(--cream);
+  font-size:13.5px;cursor:pointer;transition:.2s;font-family:inherit;
+}
+.cal-grid button:hover:not(:disabled):not(.empty){background:rgba(233,201,139,.22);border-color:rgba(233,201,139,.42)}
+.cal-grid button:disabled{opacity:.22;cursor:not-allowed}
+.cal-grid button.sel{
+  background:linear-gradient(135deg,#F5E0B0,#D9A94E);color:#2A0510;
+  font-weight:700;border-color:transparent;box-shadow:0 6px 18px rgba(212,163,74,.4);
+}
+.cal-grid button.empty{background:none;border:none;cursor:default}
+
+.slot-title{font-size:14px;font-weight:700;margin-bottom:12px;color:#F6E3B4}
+.slot-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(100px,1fr));gap:8px}
+.slot{
+  padding:10px 6px;border-radius:11px;font-size:13px;cursor:pointer;transition:.2s;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  color:var(--cream);font-family:inherit;
+}
+.slot:hover{background:rgba(233,201,139,.18);border-color:rgba(233,201,139,.38)}
+.slot.sel{
+  background:linear-gradient(135deg,#F5E0B0,#D9A94E);color:#2A0510;
+  font-weight:700;border-color:transparent;
+}
+
+.field{display:block;margin-bottom:14px}
+.field > span{display:block;font-size:13px;margin-bottom:7px;color:#EFDCC0;font-weight:600}
+.field input,.field select,.field textarea{
+  width:100%;padding:13px 15px;border-radius:13px;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  color:var(--cream);font-family:inherit;font-size:14.5px;outline:none;transition:.25s;
+  appearance:none;
+}
+.field select{
+  background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E9C98B'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:20px;
+  padding-right:40px;
+}
+.field select option{background:#2a0812;color:#FBF3E7}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:rgba(233,201,139,.62);background:rgba(255,255,255,.1);
+  box-shadow:0 0 0 4px rgba(233,201,139,.1);
+}
+.field textarea{resize:vertical;min-height:80px}
+
+.book-summary{
+  display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 18px;
+  padding:14px 16px;border-radius:13px;
+  background:rgba(233,201,139,.09);border:1px dashed rgba(233,201,139,.35);
+  font-size:13.5px;
+}
+.book-summary span{display:inline-flex;align-items:center;gap:7px;color:#F6E3B4}
+.book-summary i{font-size:12px;opacity:.85}
+.book-summary .empty-note{color:var(--muted);font-size:13px}
+
+.form-note{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center;line-height:1.7}
+
+/* ============================================================
+   CONTACT CTA BAND
+============================================================ */
+.cta-band{
+  padding:clamp(32px,5vw,56px) clamp(24px,4vw,54px);
+  text-align:center;position:relative;overflow:hidden;
+  background:
+    radial-gradient(700px 320px at 50% 0%,rgba(233,201,139,.18),transparent 70%),
+    linear-gradient(150deg,rgba(255,255,255,.1),rgba(255,255,255,.03));
+  border:1px solid rgba(233,201,139,.28);
+  border-radius:28px;
+  backdrop-filter:blur(20px);
+  box-shadow:var(--shadow);
+}
+.cta-band h2{font-size:clamp(24px,3.6vw,38px);line-height:1.42;font-weight:700;margin-bottom:14px}
+.cta-band p{color:var(--muted);max-width:640px;margin:0 auto 28px;font-size:15.5px}
+.cta-actions{display:flex;flex-wrap:wrap;gap:13px;justify-content:center}
+.cta-contact{
+  display:flex;flex-wrap:wrap;gap:26px;justify-content:center;margin-top:32px;
+  padding-top:26px;border-top:1px solid rgba(255,255,255,.12);
+}
+.cta-contact a{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:600;color:#F6E3B4;transition:.25s}
+.cta-contact a:hover{color:#fff;transform:translateY(-2px)}
+.cta-contact i{color:var(--gold-2)}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+.site-foot{margin-top:clamp(50px,7vw,90px);border-radius:28px 28px 0 0;padding:clamp(36px,5vw,58px) 0 0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px;padding-bottom:38px}
+.foot-brand .brand{margin-bottom:16px}
+.foot-brand p{font-size:13.5px;color:var(--muted);line-height:1.85;max-width:290px}
+.socials{display:flex;gap:10px;margin-top:18px}
+.socials a{
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;
+  background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);
+  color:var(--gold);transition:.28s;font-size:15px;
+}
+.socials a:hover{background:linear-gradient(135deg,#F5E0B0,#C9922F);color:#3B0710;transform:translateY(-3px)}
+
+.foot-col h4{font-size:15px;font-weight:700;margin-bottom:16px;color:#F6E3B4}
+.foot-col ul{list-style:none;display:grid;gap:10px}
+.foot-col li{font-size:13.5px;color:var(--muted);display:flex;gap:9px;align-items:flex-start;line-height:1.65}
+.foot-col li i{color:var(--gold-2);font-size:12px;margin-top:6px;flex-shrink:0}
+.foot-col a:hover{color:#F6E3B4}
+
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,.1);padding:20px 0;
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;
+  font-size:12.5px;color:rgba(251,243,231,.5);
+}
+
+/* ============================================================
+   FLOATING WHATSAPP
+============================================================ */
+.float-stack{
+  position:fixed;right:20px;bottom:24px;z-index:1000;
+  display:flex;flex-direction:column;gap:12px;align-items:flex-end;
+}
+
+.wa-float{
+  position:relative;width:62px;height:62px;border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#2ED573,#0FA958);
+  color:#fff;box-shadow:0 12px 34px rgba(37,211,102,.5);
+  animation:waBob 2.6s ease-in-out infinite;
+  transition:.3s;
+}
+.wa-float svg{width:33px;height:33px;fill:#fff;position:relative;z-index:2}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 16px 42px rgba(37,211,102,.72)}
+
+.wa-ring{
+  position:absolute;inset:0;border-radius:50%;
+  border:2px solid rgba(46,213,115,.7);
+  animation:waPulse 2.4s cubic-bezier(.2,.6,.3,1) infinite;
+}
+.wa-ring2{animation-delay:1.2s}
+
+@keyframes waPulse{
+  0%{transform:scale(.9);opacity:.85}
+  70%{transform:scale(1.85);opacity:0}
+  100%{transform:scale(1.85);opacity:0}
+}
+@keyframes waBob{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-7px)}
+}
+
+.wa-tip{
+  position:absolute;right:76px;top:50%;transform:translateY(-50%) translateX(10px);
+  background:rgba(20,4,10,.92);border:1px solid rgba(46,213,115,.4);
+  color:#DFFFEC;font-size:13px;font-weight:600;padding:9px 15px;border-radius:12px;
+  white-space:nowrap;opacity:0;pointer-events:none;transition:.35s;
+  backdrop-filter:blur(12px);box-shadow:0 10px 26px rgba(0,0,0,.45);
+}
+.wa-float:hover .wa-tip{opacity:1;transform:translateY(-50%) translateX(0)}
+.wa-tip::after{
+  content:'';position:absolute;right:-6px;top:50%;transform:translateY(-50%) rotate(45deg);
+  width:11px;height:11px;background:rgba(20,4,10,.92);
+  border-right:1px solid rgba(46,213,115,.4);border-top:1px solid rgba(46,213,115,.4);
+}
+
+.call-float{
+  width:50px;height:50px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  color:#F6E3B4;font-size:17px;backdrop-filter:blur(14px);
+  box-shadow:0 10px 26px rgba(0,0,0,.4);transition:.3s;
+}
+.call-float:hover{background:linear-gradient(135deg,#F5E0B0,#C9922F);color:#3B0710;transform:scale(1.08)}
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero .lead{max-width:100%}
+  .video-grid{grid-template-columns:1fr;gap:36px}
+  .reel-wrap{order:-1}
+  .founder-grid{grid-template-columns:1fr;gap:34px}
+  .founder-photo{max-width:400px;margin:0 auto}
+  .booking-wrap{grid-template-columns:1fr}
+  .booking-left{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:960px){
+  .nav-links{
+    position:absolute;top:calc(100% + 10px);left:0;right:0;
+    flex-direction:column;align-items:stretch;gap:4px;padding:12px;display:none;
+    background:rgba(28,6,13,.95);backdrop-filter:blur(22px);
+    border:1px solid var(--glass-brd);border-radius:16px;
+    box-shadow:0 24px 60px rgba(0,0,0,.6);
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 14px}
+  .nav-toggle{display:grid}
+  .nav-cta{margin-left:auto}
+  .nav-cta .btn-glass{display:none}
+}
+
+@media(max-width:760px){
+  .strip-inner{grid-template-columns:1fr 1fr;gap:22px 10px;padding:24px 12px}
+  .strip-inner div:nth-child(3)::before,
+  .strip-inner div:nth-child(odd)::before{display:none}
+  .cmp-row{grid-template-columns:1fr 78px 78px;padding:13px 12px;gap:6px}
+  .cmp-label{font-size:13px;line-height:1.5}
+  .cmp-head .us,.cmp-head .them{font-size:11.5px;padding:6px 4px}
+  .cmp-us,.cmp-them{font-size:15px}
+  .foot-grid{grid-template-columns:1fr;gap:28px}
+  .founder-stats div{flex:1 1 auto}
+  .hero-actions .btn,.cta-actions .btn{flex:1 1 100%;justify-content:center}
+  .topbar{font-size:12px;padding:8px 12px;line-height:1.6}
+  .quote{padding:22px 20px 22px 46px;font-size:14.5px}
+  .quote::before{font-size:48px;left:10px}
+  .float-stack{right:14px;bottom:18px}
+  .wa-float{width:56px;height:56px}
+  .wa-float svg{width:29px;height:29px}
+  .call-float{width:46px;height:46px;font-size:15px}
+  .wa-tip{display:none}
+}
+
+@media(max-width:420px){
+  .brand-txt small{display:none}
+  .nav-cta .btn{padding:10px 13px;font-size:12.5px}
+  .slot-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== BACKGROUND ===== -->
+<div class="bg-layer"></div>
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  ⚖️ সীমিত সময়ের জন্য <strong>ফ্রি লিগ্যাল কনসালটেশন</strong> — আজই আপনার স্লট বুক করুন
+</div>
+
+<!-- ===== HEADER ===== -->
+<header class="site-head" id="siteHead">
+  <div class="container">
+    <div class="nav-wrap glass">
+      <a href="#home" class="brand">
+        <span class="brand-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+        <span class="brand-txt">
+          <strong>ঢাকা ল ফার্ম</strong>
+          <small>আপনার বিশ্বস্ত আইনি পার্টনার</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#services">সেবা সমূহ</a>
+        <a href="#why">কেন আমরা</a>
+        <a href="#video">ভিডিও</a>
+        <a href="#compare">তুলনা</a>
+        <a href="#faq">প্রশ্নোত্তর</a>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="tel:01640900005" class="btn btn-glass"><i class="fa-solid fa-phone"></i> ০১৬৪০ ৯০০০০৫</a>
+        <a href="#booking" class="btn btn-gold">ফ্রি কনসালটেশন</a>
+        <button class="nav-toggle" id="navToggle" aria-label="মেনু">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============================================================
+     1. HERO
+============================================================ -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="hero-left reveal">
+      <div class="pill">
+        <span class="dot"></span> ১০+ বছরের অভিজ্ঞতা • সারা বাংলাদেশে সেবা
+      </div>
+
+      <h1>আপনার ব্যবসার <span class="grad-gold">আইন সমাধান</span> এক ঠিকানায়</h1>
+
+      <p class="lead">
+        বিশ্বাস, দক্ষতা ও পেশাদারিত্বের সাথে আমরা আছি আপনার পাশে।
+        ব্যবসা শুরু থেকে ডকুমেন্ট প্রসেসিং — <strong>সব সেবা এখন এক জায়গায়!</strong>
+      </p>
+
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-gold">
+          <i class="fa-regular fa-calendar-check"></i> ফ্রি কনসালটেশন বুক করুন
+        </a>
+        <a href="https://wa.me/8801640900005?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%A2%E0%A6%BE%E0%A6%95%E0%A6%BE%20%E0%A6%B2%20%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A7%87%E0%A6%B0%20%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE%20%E0%A6%B8%E0%A6%AE%E0%A7%8D%E0%A6%AA%E0%A6%B0%E0%A7%8D%E0%A6%95%E0%A7%87%20%E0%A6%9C%E0%A6%BE%E0%A6%A8%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4" target="_blank" rel="noopener" class="btn btn-wa">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp এ কথা বলুন
+        </a>
+      </div>
+
+      <div class="hero-trust">
+        <div class="avatars">
+          <span>র</span><span>ন</span><span>আ</span><span>স</span>
+        </div>
+        <div>
+          <div class="stars">★★★★★</div>
+          <span>৫০০০+ ব্যবসা আমাদের উপর ভরসা রাখে</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO CARD -->
+    <div class="hero-card glass reveal">
+      <div class="hc-head">
+        <div class="seal"><i class="fa-solid fa-scale-balanced"></i></div>
+        <div>
+          <h3>ঘরে বসেই আবেদন করুন</h3>
+          <p>সময় • ক্রয় • নির্ভরযোগ্যতা</p>
+        </div>
+      </div>
+
+      <div class="hc-stats">
+        <div><strong>১০+</strong><span>বছরের অভিজ্ঞতা</span></div>
+        <div><strong>৫০০০+</strong><span>সন্তুষ্ট ক্লায়েন্ট</span></div>
+        <div><strong>৬৪</strong><span>জেলায় সেবা</span></div>
+        <div><strong>২৪/৭</strong><span>সাপোর্ট</span></div>
+      </div>
+
+      <a href="tel:01640900005" class="hc-line">
+        <i class="fa-solid fa-phone-volume"></i>
+        <div>
+          <small>সরাসরি কল করুন</small>
+          <strong>০১৬৪০ ৯০০০০৫</strong>
+        </div>
+      </a>
+
+      <a href="mailto:dhakalawfirmbd@gmail.com" class="hc-line">
+        <i class="fa-solid fa-envelope-open-text"></i>
+        <div>
+          <small>ইমেইল করুন</small>
+          <strong>dhakalawfirmbd@gmail.com</strong>
+        </div>
+      </a>
+
+      <a href="https://www.dhakalawfirm.com" target="_blank" rel="noopener" class="hc-line">
+        <i class="fa-solid fa-globe"></i>
+        <div>
+          <small>ওয়েবসাইট</small>
+          <strong>www.dhakalawfirm.com</strong>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     2. STATS STRIP
+============================================================ -->
+<section class="stats-strip">
+  <div class="container">
+    <div class="strip-inner glass reveal">
+      <div><strong>১০+</strong><span>বছরের অভিজ্ঞতা</span></div>
+      <div><strong>৫০০০+</strong><span>সন্তুষ্ট ক্লায়েন্ট</span></div>
+      <div><strong>২০+</strong><span>আইনি সেবা</span></div>
+      <div><strong>৬৪</strong><span>জেলায় সেবা</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. SERVICES
+============================================================ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kick"><i class="fa-solid fa-briefcase"></i> আমাদের সেবা সমূহ</span>
+      <h2>ব্যবসার জন্য যা যা দরকার — <span class="grad-gold">সব এক জায়গায়</span></h2>
+      <p>লাইসেন্স থেকে রেজিস্ট্রেশন, ট্যাক্স থেকে ট্রেডমার্ক — আপনার ব্যবসার প্রতিটি আইনি প্রয়োজনে আমরা পাশে আছি।</p>
+    </div>
+
+    <div class="svc-grid">
+
+      <article class="svc-card glass reveal">
+        <div class="svc-ico"><i class="fa-solid fa-id-card"></i></div>
+        <h3>ট্রেড লাইসেন্স</h3>
+        <p>নতুন ট্রেড লাইসেন্স এবং নবায়ন — দ্রুততম সময়ে, ঝামেলা ছাড়াই সম্পন্ন করুন।</p>
+        <a href="#booking" class="svc-link">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="svc-card glass reveal">
+        <div class="svc-ico"><i class="fa-solid fa-building-columns"></i></div>
+        <h3>কোম্পানি রেজিস্ট্রেশন</h3>
+        <p>লিমিটেড কোম্পানি গঠন, MOA/AOA প্রস্তুত, RJSC রেজিস্ট্রেশন — সম্পূর্ণ প্রক্রিয়া।</p>
+        <a href="#booking" class="svc-link">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="svc-card glass reveal">
+        <div class="svc-ico"><i class="fa-solid fa-handshake"></i></div>
+        <h3>পার্টনারশিপ রেজিস্ট্রেশন</h3>
+        <p>পার্টনারশিপ ডিড ও ফার্ম রেজিস্ট্রেশন — আইনসম্মত উপায়ে, সঠিক ডকুমেন্টেশনসহ।</p>
+        <a href="#booking" class="svc-link">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="svc-card glass reveal">
+        <div class="svc-ico"><i class="fa-solid fa-ship"></i></div>
+        <h3>ইমপোর্ট ও এক্সপোর্ট লাইসেন্স</h3>
+        <p>IRC ও ERC লাইসেন্স — আন্তর্জাতিক ব্যবসার জন্য প্রয়োজনীয় সব অনুমোদন।</p>
+        <a href="#booking" class="svc-link">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="svc-card glass reveal">
+        <div class="svc-ico"><i class="fa-solid fa-percent"></i></div>
+        <h3>ট্যাক্স / ভ্যাট কনসালটেশন</h3>
+        <p>টিআইএন, বিন, ভ্যাট রিটার্ন ও কর সংক্রান্ত পরামর্শ — বিশেষজ্ঞদের তত্ত্বাবধানে।</p>
+        <a href="#booking" class="svc-link">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="svc-card glass reveal">
+        <div class="svc-ico"><i class="fa-solid fa-trademark"></i></div>
+        <h3>ট্রেডমার্ক রেজিস্ট্রেশন</h3>
+        <p>আপনার ব্র্যান্ড নেম ও লোগো সুরক্ষিত করুন — DPDT-তে ট্রেডমার্ক নিবন্ধন।</p>
+        <a href="#booking" class="svc-link">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="svc-card glass reveal">
+        <div class="svc-ico"><i class="fa-solid fa-users-rectangle"></i></div>
+        <h3>সোসাইটি / ফাউন্ডেশন রেজিস্ট্রেশন</h3>
+        <p>ক্লাব, এনজিও ও ফাউন্ডেশন নিবন্ধন — সমাজকল্যাণ অধিদপ্তরের অনুমোদনসহ।</p>
+        <a href="#booking" class="svc-link">বিস্তারিত জানুন <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="svc-card glass cta-card reveal">
+        <div class="svc-ico"><i class="fa-solid fa-headset"></i></div>
+        <h3>আপনার সেবাটি খুঁজে পাচ্ছেন না?</h3>
+        <p>আপনার প্রয়োজনটা আমাদের জানান — আমরা সবচেয়ে ভালো সমাধান খুঁজে দেব।</p>
+        <a href="https://wa.me/8801640900005" target="_blank" rel="noopener" class="btn btn-gold">
+          <i class="fa-brands fa-whatsapp"></i> এখনই জিজ্ঞাসা করুন
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. SPECIAL SERVICES
+============================================================ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kick"><i class="fa-solid fa-star"></i> বিশেষ সেবা সমূহ</span>
+      <h2>এছাড়াও আমাদের <span class="grad-gold">বিশেষ সেবা</span></h2>
+    </div>
+
+    <div class="special-grid">
+      <a href="#booking" class="special glass reveal">
+        <span class="ico"><i class="fa-solid fa-language"></i></span>
+        <div>
+          <h4>Translation Service</h4>
+          <span>আইনি ডকুমেন্ট অনুবাদ (বাংলা ↔ ইংরেজি)</span>
+        </div>
+      </a>
+
+      <a href="#booking" class="special glass reveal">
+        <span class="ico"><i class="fa-solid fa-stamp"></i></span>
+        <div>
+          <h4>Notary Public Service</h4>
+          <span>নোটারি পাবলিক সত্যায়ন ও সনদ</span>
+        </div>
+      </a>
+
+      <a href="#booking" class="special glass reveal">
+        <span class="ico"><i class="fa-solid fa-certificate"></i></span>
+        <div>
+          <h4>E-Apostille Service</h4>
+          <span>বিদেশে ডকুমেন্ট ব্যবহারের জন্য অ্যাপোস্টিল</span>
+        </div>
+      </a>
+
+      <a href="#booking" class="special glass reveal">
+        <span class="ico"><i class="fa-solid fa-landmark-flag"></i></span>
+        <div>
+          <h4>MOFA Attestation</h4>
+          <span>পররাষ্ট্র মন্ত্রণালয়ের সত্যায়ন সেবা</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     5. WHY US
+============================================================ -->
+<section class="section" id="why">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kick"><i class="fa-solid fa-shield-halved"></i> কেন আমরা</span>
+      <h2>আপনি কেন <span class="grad-gold">ঢাকা ল ফার্ম</span> বেছে নেবেন?</h2>
+      <p>শুধু সেবা নয় — আমরা দিচ্ছি সম্পূর্ণ নিশ্চিন্ততা। আপনার কাজ আমাদের দায়িত্ব।</p>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card glass reveal">
+        <span class="ico"><i class="fa-solid fa-house-laptop"></i></span>
+        <div>
+          <h4>ঘরে বসেই আবেদন</h4>
+          <p>অফিসে আসার প্রয়োজন নেই — অনলাইনেই সব ডকুমেন্ট জমা ও প্রক্রিয়া সম্পন্ন করুন।</p>
+        </div>
+      </div>
+
+      <div class="why-card glass reveal">
+        <span class="ico"><i class="fa-solid fa-lock"></i></span>
+        <div>
+          <h4>নিরাপদ ও নির্ভরযোগ্য সেবা</h4>
+          <p>আপনার প্রতিটি ডকুমেন্ট গোপনীয়তা ও নিরাপত্তার সাথে সংরক্ষিত থাকে।</p>
+        </div>
+      </div>
+
+      <div class="why-card glass reveal">
+        <span class="ico"><i class="fa-solid fa-bolt"></i></span>
+        <div>
+          <h4>দ্রুত প্রসেসিং</h4>
+          <p>নির্দিষ্ট সময়সীমার মধ্যে কাজ সম্পন্ন — প্রতিদিনের অগ্রগতি আপডেট পাবেন।</p>
+        </div>
+      </div>
+
+      <div class="why-card glass reveal">
+        <span class="ico"><i class="fa-solid fa-user-tie"></i></span>
+        <div>
+          <h4>অভিজ্ঞ টিমের সহযোগিতা</h4>
+          <p>১০+ বছরের অভিজ্ঞ আইনজীবী ও কনসালট্যান্ট টিম আপনার পাশে সবসময়।</p>
+        </div>
+      </div>
+
+      <div class="why-card glass reveal">
+        <span class="ico"><i class="fa-solid fa-truck-fast"></i></span>
+        <div>
+          <h4>ডকুমেন্ট পিকআপ ও হোম ডেলিভারি</h4>
+          <p>আমরা নিজেরাই ডকুমেন্ট সংগ্রহ করি এবং সম্পন্ন কাজ আপনার দরজায় পৌঁছে দিই।</p>
+        </div>
+      </div>
+
+      <div class="why-card glass reveal">
+        <span class="ico"><i class="fa-solid fa-map-location-dot"></i></span>
+        <div>
+          <h4>সারা বাংলাদেশে সেবা</h4>
+          <p>ঢাকার বাইরে থেকেও ৬৪ জেলার যেকোনো প্রান্ত থেকে সেবা নিতে পারবেন।</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     6. VIDEO SECTION
+============================================================ -->
+<section class="section" id="video" style="padding-top:0">
+  <div class="container video-grid">
+
+    <div class="video-txt reveal">
+      <span class="kick"><i class="fa-solid fa-play"></i> আমাদের সাথে পরিচিত হোন</span>
+      <h2>এক নজরে দেখে নিন <span class="grad-gold">আমরা কীভাবে কাজ করি</span></h2>
+      <p>
+        আইনি কাজ মানেই দৌড়াদৌড়ি আর ঝামেলা — এই ধারণা বদলে দিয়েছি আমরা।
+        দেখুন কীভাবে ঢাকা ল ফার্ম ঘরে বসেই আপনার সব আইনি কাজ সম্পন্ন করে দিচ্ছে।
+      </p>
+
+      <ul class="vlist">
+        <li><i class="fa-solid fa-circle-check"></i> <span>ডকুমেন্ট সংগ্রহ থেকে ডেলিভারি — সম্পূর্ণ প্রক্রিয়া এক জায়গায়</span></li>
+        <li><i class="fa-solid fa-circle-check"></i> <span>প্রতিটি ধাপে WhatsApp আপডেট ও টিম সাপোর্ট</span></li>
+        <li><i class="fa-solid fa-circle-check"></i> <span>স্বচ্ছ মূল্য, কোনো লুকানো চার্জ নেই</span></li>
+      </ul>
+
+      <a href="#booking" class="btn btn-gold"><i class="fa-regular fa-calendar-check"></i> ফ্রি কনসালটেশন বুক করুন</a>
+    </div>
+
+    <div class="reel-wrap reveal">
+      <div class="reel-frame">
+        <!-- ইনস্টাগ্রাম রিল এমবেড -->
+        <iframe
+          src="https://www.instagram.com/reel/DcTpuLsvFdS/embed/"
+          title="ঢাকা ল ফার্ম — ইনস্টাগ্রাম রিল"
+          loading="lazy"
+          allowtransparency="true"
+          scrolling="no"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <a href="https://www.instagram.com/reel/DcTpuLsvFdS/" target="_blank" rel="noopener"
+         class="btn btn-glass" style="margin-top:18px">
+        <i class="fa-brands fa-instagram"></i> ইনস্টাগ্রামে দেখুন
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     7. FOUNDER & CEO
+============================================================ -->
+<section class="section" id="founder" style="padding-top:0">
+  <div class="container founder-grid">
+
+    <div class="founder-photo glass reveal">
+      <!-- আপনার নিজের ছবি এখানে বসান -->
+      <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+           alt="ড. মোঃ সাখাওয়াত হোসেন — প্রতিষ্ঠাতা ও সিইও, ঢাকা ল ফার্ম">
+      <div class="photo-badge">⚖ ১০+ বছরের অভিজ্ঞতা</div>
+    </div>
+
+    <div class="founder-txt reveal">
+      <span class="kick"><i class="fa-solid fa-quote-left"></i> প্রতিষ্ঠাতার বাণী</span>
+      <h2>ড. মোঃ সাখাওয়াত হোসেন</h2>
+      <p class="role">Founder &amp; CEO — ঢাকা ল ফার্ম</p>
+
+      <blockquote class="quote">
+        আইন শুধু কাগজের নিয়ম নয় — এটি আপনার ব্যবসার ভিত্তি।
+        আমরা শুধু ডকুমেন্ট তৈরি করি না, আমরা আপনার স্বপ্নকে আইনি সুরক্ষা দিই।
+        আমাদের প্রতিটি কাজের পেছনে থাকে একটি প্রতিশ্রুতি —
+        <strong>“Your Success, Our Commitment.”</strong>
+      </blockquote>
+
+      <p>
+        ঢাকা ল ফার্মের যাত্রা শুরু হয়েছিল একটি সহজ বিশ্বাস থেকে — ব্যবসায়ী ও উদ্যোক্তাদের
+        আইনি জটিলতা থেকে মুক্তি দেওয়া উচিত। আজ হাজারো ব্যবসা আমাদের উপর ভরসা রাখে,
+        আর আমরা প্রতিদিন সেই ভরসার মর্যাদা রাখার চেষ্টা করি।
+      </p>
+
+      <div class="founder-stats">
+        <div><strong>৫০০০+</strong><span>সফল কেস</span></div>
+        <div><strong>১০+</strong><span>বছরের অভিজ্ঞতা</span></div>
+        <div><strong>৯৮%</strong><span>ক্লায়েন্ট সন্তুষ্টি</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     8. COMPARISON
+============================================================ -->
+<section class="section" id="compare" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kick"><i class="fa-solid fa-scale-unbalanced"></i> তুলনা করুন</span>
+      <h2>ঢাকা ল ফার্ম <span class="grad-gold">বনাম</span> অন্যান্য ফার্ম</h2>
+      <p>একই সেবা, কিন্তু অভিজ্ঞতা সম্পূর্ণ আলাদা। দেখুন কেন আমরা এগিয়ে।</p>
+    </div>
+
+    <div class="compare glass reveal">
+
+      <div class="cmp-row cmp-head">
+        <div>বিষয়</div>
+        <div class="us">ঢাকা ল ফার্ম</div>
+        <div class="them">অন্যান্য ফার্ম</div>
+      </div>
+
+      <div class="cmp-row">
+        <div class="cmp-label">ঘরে বসেই ডকুমেন্ট পিকআপ ও ডেলিভারি</div>
+        <div class="cmp-us"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="cmp-them"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+
+      <div class="cmp-row">
+        <div class="cmp-label">নির্দিষ্ট সময়ে কাজ সম্পন্নের নিশ্চয়তা</div>
+        <div class="cmp-us"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="cmp-them"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+
+      <div class="cmp-row">
+        <div class="cmp-label">স্বচ্ছ মূল্য — লুকানো চার্জ নেই</div>
+        <div class="cmp-us"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="cmp-them"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+
+      <div class="cmp-row">
+        <div class="cmp-label">ডেডিকেটেড লিগ্যাল অ্যাডভাইজর</div>
+        <div class="cmp-us"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="cmp-them"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+
+      <div class="cmp-row">
+        <div class="cmp-label">অনলাইনে কাজের অগ্রগতি ট্র্যাকিং</div>
+        <div class="cmp-us"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="cmp-them"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+
+      <div class="cmp-row">
+        <div class="cmp-label">২৪/৭ WhatsApp সাপোর্ট</div>
+        <div class="cmp-us"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="cmp-them"><i class="fa-solid fa-circle-xmark"></i></div>
+      </div>
+
+      <div class="cmp-row">
+        <div class="cmp-label">সারা বাংলাদেশে (৬৪ জেলা) সেবা</div>
+        <div class="cmp-us"><i class="fa-solid fa-circle-check"></i></div>
+        <div class="cmp-them"><i class="fa-solid fa-circle-exclamation"></i></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     9. PROCESS
+============================================================ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kick"><i class="fa-solid fa-route"></i> কাজের ধাপ</span>
+      <h2>মাত্র <span class="grad-gold">৪ ধাপে</span> কাজ সম্পন্ন</h2>
+      <p>জটিলতা ছাড়াই, সহজ প্রক্রিয়ায় আপনার কাজ শেষ।</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="step glass reveal">
+        <div class="num">১</div>
+        <h4>কল বা WhatsApp করুন</h4>
+        <p>আপনার প্রয়োজন জানান — আমরা সাথে সাথে সাড়া দেব।</p>
+      </div>
+      <div class="step glass reveal">
+        <div class="num">২</div>
+        <h4>ফ্রি কনসালটেশন</h4>
+        <p>বিশেষজ্ঞের সাথে কথা বলে সেবা ও খরচ সম্পর্কে জানুন।</p>
+      </div>
+      <div class="step glass reveal">
+        <div class="num">৩</div>
+        <h4>ডকুমেন্ট কালেকশন</h4>
+        <p>আমরা নিজেরাই ডকুমেন্ট সংগ্রহ করব — আপনার দরজা থেকে।</p>
+      </div>
+      <div class="step glass reveal">
+        <div class="num">৪</div>
+        <h4>কাজ সম্পন্ন ও ডেলিভারি</h4>
+        <p>নির্দিষ্ট সময়ে সম্পন্ন করে ডকুমেন্ট আপনার হাতে পৌঁছে দেওয়া হবে।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     10. TESTIMONIALS
+============================================================ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kick"><i class="fa-solid fa-heart"></i> ক্লায়েন্টদের কথা</span>
+      <h2>যারা আমাদের <span class="grad-gold">বিশ্বাস করেছেন</span></h2>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi glass reveal">
+        <div class="stars">★★★★★</div>
+        <p>“ট্রেড লাইসেন্স নবায়নের কাজ মাত্র ৩ দিনে শেষ করে দিয়েছেন। অফিসে যাওয়ার কোনো ঝামেলা ছাড়াই সব হয়েছে। সত্যিই পেশাদার টিম।”</p>
+        <div class="testi-who">
+          <span class="av">র</span>
+          <div>
+            <strong>রফিকুল ইসলাম</strong>
+            <span>ব্যবসায়ী, ঢাকা</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi glass reveal">
+        <div class="stars">★★★★★</div>
+        <p>“স্টার্টআপের কোম্পানি রেজিস্ট্রেশন থেকে ট্রেডমার্ক — সবকিছু এক জায়গা থেকে করিয়েছি। ওরা শুধু কাজ করেনি, সঠিক পরামর্শও দিয়েছে।”</p>
+        <div class="testi-who">
+          <span class="av">ন</span>
+          <div>
+            <strong>নুসরাত জাহান</strong>
+            <span>স্টার্টআপ ফাউন্ডার</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi glass reveal">
+        <div class="stars">★★★★★</div>
+        <p>“চট্টগ্রাম থেকে বসে ইমপোর্ট-এক্সপোর্ট লাইসেন্স করিয়েছি। ডকুমেন্ট তারা নিজেরাই সংগ্রহ করেছে। সময়মতো ডেলিভারিও পেয়েছি।”</p>
+        <div class="testi-who">
+          <span class="av">আ</span>
+          <div>
+            <strong>আব্দুল করিম</strong>
+            <span>রপ্তানিকারক, চট্টগ্রাম</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11. FAQ
+============================================================ -->
+<section class="section" id="faq" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kick"><i class="fa-regular fa-circle-question"></i> প্রশ্নোত্তর</span>
+      <h2>আপনার <span class="grad-gold">জিজ্ঞাসা</span></h2>
+    </div>
+
+    <div class="faq-list">
+
+      <details class="faq-item reveal">
+        <summary>ফ্রি কনসালটেশন কীভাবে পাব?</summary>
+        <p>নিচের বুকিং ফর্মে আপনার নাম, মোবাইল নম্বর, তারিখ ও সময় নির্বাচন করে সাবমিট করুন। অথবা সরাসরি <strong>০১৬৪০ ৯০০০০৫</strong> নম্বরে কল বা WhatsApp করুন। আমাদের একজন আইনি পরামর্শক আপনাকে ফ্রি পরামর্শ দেবেন।</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>ট্রেড লাইসেন্স করতে কত সময় লাগে?</summary>
+        <p>সাধারণত ২–৫ কর্মদিবসের মধ্যে সম্পন্ন হয়। সিটি কর্পোরেশন / ইউনিয়ন পরিষদের ধরন ও ডকুমেন্টের সম্পূর্ণতার উপর সময় নির্ভর করে।</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>আমি কি ঘরে বসেই সব ডকুমেন্ট জমা দিতে পারব?</summary>
+        <p>অবশ্যই। আপনি অনলাইনে ডকুমেন্ট আপলোড করতে পারবেন, অথবা আমাদের টিম আপনার বাসা/অফিস থেকে ডকুমেন্ট সংগ্রহ করবে। কাজ শেষ হলে হোম ডেলিভারি দেওয়া হবে।</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>ঢাকার বাইরে থেকে সেবা নেওয়া যাবে?</summary>
+        <p>হ্যাঁ। আমরা সারা বাংলাদেশের ৬৪ জেলায় সেবা প্রদান করি। অনলাইন প্রক্রিয়ার মাধ্যমে ঢাকার বাইরে থেকেও সম্পূর্ণ সেবা নিতে পারবেন।</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>সেবার ফি কেমন?</summary>
+        <p>প্রতিটি সেবার ফি কাজের ধরন ও পরিধির উপর নির্ভর করে। ফ্রি কনসালটেশনে আমরা আপনাকে সম্পূর্ণ স্বচ্ছ ফি তালিকা জানিয়ে দেব — কোনো লুকানো চার্জ নেই।</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     12. BOOKING
+============================================================ -->
+<section class="section" id="booking" style="padding-top:0">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kick"><i class="fa-regular fa-calendar-check"></i> ফ্রি কনসালটেশন</span>
+      <h2>আপনার <span class="grad-gold">সুবিধামত সময়</span> বেছে নিন</h2>
+      <p>ক্যালেন্ডার থেকে তারিখ ও সময় নির্বাচন করুন — আমরা সাথে সাথে কনফার্ম করব।</p>
+    </div>
+
+    <div class="booking-wrap glass reveal">
+
+      <!-- LEFT: CALENDAR -->
+      <div class="booking-left">
+        <h3>📅 তারিখ নির্বাচন করুন</h3>
+        <p class="sub">শুক্রবার বন্ধ • বাকি দিনগুলোতে সকাল ১০টা – সন্ধ্যা ৬টা</p>
+
+        <div class="cal">
+          <div class="cal-head">
+            <button class="cal-nav" id="prevMonth" type="button" aria-label="আগের মাস">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <span id="calTitle">—</span>
+            <button class="cal-nav" id="nextMonth" type="button" aria-label="পরের মাস">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+          <div class="cal-days" id="calDayNames"></div>
+          <div class="cal-grid" id="calGrid"></div>
+        </div>
+
+        <div class="slot-title">🕐 সময় নির্বাচন করুন</div>
+        <div class="slot-grid" id="slotGrid"></div>
+      </div>
+
+      <!-- RIGHT: FORM -->
+      <div class="booking-right">
+        <h3>✍️ আপনার তথ্য দিন</h3>
+        <p class="sub" style="font-size:13px;color:var(--muted);margin-bottom:20px">
+          তথ্য দিয়ে সাবমিট করলে WhatsApp-এ বুকিং কনফার্মেশন চলে যাবে।
+        </p>
+
+        <form id="bookForm" novalidate>
+          <label class="field">
+            <span>আপনার নাম *</span>
+            <input type="text" id="bkName" placeholder="পুরো নাম লিখুন" required>
+          </label>
+
+          <label class="field">
+            <span>মোবাইল নম্বর *</span>
+            <input type="tel" id="bkPhone" placeholder="01XXXXXXXXX" required>
+          </label>
+
+          <label class="field">
+            <span>কোন সেবাটি প্রয়োজন?</span>
+            <select id="bkService">
+              <option>ট্রেড লাইসেন্স (নতুন / নবায়ন)</option>
+              <option>কোম্পানি রেজিস্ট্রেশন (লিমিটেড কোম্পানি)</option>
+              <option>পার্টনারশিপ রেজিস্ট্রেশন</option>
+              <option>ইমপোর্ট ও এক্সপোর্ট লাইসেন্স</option>
+              <option>ট্যাক্স / ভ্যাট কনসালটেশন</option>
+              <option>ট্রেডমার্ক রেজিস্ট্রেশন</option>
+              <option>সোসাইটি / ফাউন্ডেশন রেজিস্ট্রেশন</option>
+              <option>Translation Service</option>
+              <option>Notary Public Service</option>
+              <option>E-Apostille Service</option>
+              <option>MOFA Attestation</option>
+              <option>অন্যান্য</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>অতিরিক্ত বার্তা (ঐচ্ছিক)</span>
+            <textarea id="bkMsg" rows="3" placeholder="আপনার প্রয়োজন সংক্ষেপে লিখুন..."></textarea>
+          </label>
+
+          <div class="book-summary" id="bookSummary">
+            <span class="empty-note">📌 এখনো কোনো তারিখ ও সময় নির্বাচন করা হয়নি</span>
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width:100%">
+            <i class="fa-brands fa-whatsapp"></i> বুকিং কনফার্ম করুন
+          </button>
+
+          <p class="form-note">
+            অথবা সরাসরি কল করুন — <strong style="color:#F6E3B4">০১৬৪০ ৯০০০০৫</strong>
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     13. CONTACT CTA BAND
+============================================================ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>আপনার ব্যবসার আইনি কাজ <span class="grad-gold">আজই শুরু করুন</span></h2>
+      <p>প্রথম পরামর্শ সম্পূর্ণ ফ্রি। আজই কথা বলুন আমাদের বিশেষজ্ঞ টিমের সাথে।</p>
+
+      <div class="cta-actions">
+        <a href="tel:01640900005" class="btn btn-gold"><i class="fa-solid fa-phone"></i> ০১৬৪০ ৯০০০০৫</a>
+        <a href="https://wa.me/8801640900005" target="_blank" rel="noopener" class="btn btn-wa">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a href="#booking" class="btn btn-glass"><i class="fa-regular fa-calendar-check"></i> কনসালটেশন বুক করুন</a>
+      </div>
+
+      <div class="cta-contact">
+        <a href="tel:01640900005"><i class="fa-solid fa-phone-volume"></i> ০১৬৪০ ৯০০০০৫</a>
+        <a href="mailto:dhakalawfirmbd@gmail.com"><i class="fa-solid fa-envelope"></i> dhakalawfirmbd@gmail.com</a>
+        <a href="https://www.dhakalawfirm.com" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> www.dhakalawfirm.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer class="site-foot glass">
+  <div class="container">
+    <div class="foot-grid">
+
+      <div class="foot-brand">
+        <a href="#home" class="brand">
+          <span class="brand-mark"><i class="fa-solid fa-scale-balanced"></i></span>
+          <span class="brand-txt">
+            <strong>ঢাকা ল ফার্ম</strong>
+            <small>Your Success, Our Commitment</small>
+          </span>
+        </a>
+        <p>বিশ্বাস, দক্ষতা ও পেশাদারিত্বের সাথে আমরা আছি আপনার পাশে। ব্যবসা শুরু থেকে ডকুমেন্ট প্রসেসিং — সব সেবা এক জায়গায়।</p>
+        <div class="socials">
+          <a href="https://wa.me/8801640900005" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/dhakalaw" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="mailto:dhakalawfirmbd@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>আমাদের সেবা</h4>
+        <ul>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#services">ট্রেড লাইসেন্স</a></li>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#services">কোম্পানি রেজিস্ট্রেশন</a></li>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#services">ট্রেডমার্ক রেজিস্ট্রেশন</a></li>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#services">ট্যাক্স / ভ্যাট</a></li>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#services">MOFA Attestation</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>দ্রুত লিংক</h4>
+        <ul>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#why">কেন আমরা</a></li>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#video">ভিডিও</a></li>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#compare">তুলনা</a></li>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#faq">প্রশ্নোত্তর</a></li>
+          <li><i class="fa-solid fa-angle-right"></i><a href="#booking">ফ্রি কনসালটেশন</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>যোগাযোগ</h4>
+        <ul>
+          <li><i class="fa-solid fa-phone"></i><a href="tel:01640900005">০১৬৪০ ৯০০০০৫</a></li>
+          <li><i class="fa-solid fa-envelope"></i><a href="mailto:dhakalawfirmbd@gmail.com">dhakalawfirmbd@gmail.com</a></li>
+          <li><i class="fa-solid fa-globe"></i><a href="https://www.dhakalawfirm.com" target="_blank" rel="noopener">www.dhakalawfirm.com</a></li>
+          <li><i class="fa-solid fa-location-dot"></i><span>ঢাকা, বাংলাদেশ</span></li>
+          <li><i class="fa-regular fa-clock"></i><span>শনি – বৃহঃ | সকাল ১০টা – সন্ধ্যা ৬টা</span></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="foot-bottom">
+      <span>© ২০২৫ ঢাকা ল ফার্ম — সর্বস্বত্ব সংরক্ষিত</span>
+      <span>Designed with ⚖️ for your success</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING BUTTONS
+============================================================ -->
+<div class="float-stack">
+
+  <a href="tel:01640900005" class="call-float" aria-label="কল করুন">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+
+  <a href="https://wa.me/8801640900005?text=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%2C%20%E0%A6%86%E0%A6%AE%E0%A6%BF%20%E0%A6%A2%E0%A6%BE%E0%A6%95%E0%A6%BE%20%E0%A6%B2%20%E0%A6%AB%E0%A6%BE%E0%A6%B0%E0%A7%8D%E0%A6%AE%E0%A7%87%E0%A6%B0%20%E0%A6%B8%E0%A7%87%E0%A6%AC%E0%A6%BE%20%E0%A6%A8%E0%A6%BF%E0%A6%A4%E0%A7%87%20%E0%A6%9A%E0%A6%BE%E0%A6%87%E0%A5%A4"
+     target="_blank" rel="noopener" class="wa-float" aria-label="WhatsApp এ মেসেজ করুন">
+    <span class="wa-ring"></span>
+    <span class="wa-ring wa-ring2"></span>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M16.04 0C7.2 0 .04 7.16.04 16c0 2.82.74 5.58 2.14 8.01L0 32l8.14-2.14A15.9 15.9 0 0 0 16.04 32c8.84 0 16-7.16 16-16s-7.16-16-16-16zm0 29.2a13.1 13.1 0 0 1-6.68-1.83l-.48-.28-4.83 1.27 1.29-4.71-.31-.49A13.15 13.15 0 1 1 16.04 29.2zm7.2-9.86c-.39-.2-2.33-1.15-2.69-1.28-.36-.13-.62-.2-.88.2-.26.39-1.01 1.28-1.24 1.54-.23.26-.46.29-.85.1-.39-.2-1.65-.61-3.14-1.94-1.16-1.04-1.94-2.31-2.17-2.7-.23-.39-.02-.6.17-.8.18-.17.39-.46.59-.69.2-.23.26-.39.39-.65.13-.26.06-.49-.03-.69-.1-.2-.88-2.14-1.21-2.92-.32-.77-.64-.67-.88-.68-.23-.01-.49-.01-.75-.01-.26 0-.69.1-1.05.49-.36.39-1.37 1.34-1.37 3.28s1.4 3.81 1.6 4.07c.2.26 2.76 4.22 6.7 5.92.94.4 1.67.64 2.24.82.94.3 1.8.26 2.48.16.76-.11 2.33-.95 2.66-1.87.33-.92.33-1.71.23-1.87-.1-.16-.36-.26-.75-.46z"/>
+    </svg>
+    <span class="wa-tip">WhatsApp এ মেসেজ করুন</span>
+  </a>
+
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+============================================================ -->
+<script>
+/* ---------- HEADER SCROLL ---------- */
+const siteHead = document.getElementById('siteHead');
+window.addEventListener('scroll', () => {
+  siteHead.classList.toggle('scrolled', window.scrollY > 30);
+}, { passive: true });
+
+/* ---------- MOBILE MENU ---------- */
+const navToggle = document.getElementById('navToggle');
+const navLinks  = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => navLinks.classList.remove('open'))
+);
+
+/* ---------- REVEAL ON SCROLL ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('in'), i * 60);
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ============================================================
+   BOOKING CALENDAR
+============================================================ */
+const BN = ['০','১','২','৩','৪','৫','৬','৭','৮','৯'];
+const toBn = n => String(n).replace(/\d/g, d => BN[d]);
+
+const MONTHS_BN = ['জানুয়ারি','ফেব্রুয়ারি','মার্চ','এপ্রিল','মে','জুন',
+                   'জুলাই','আগস্ট','সেপ্টেম্বর','অক্টোবর','নভেম্বর','ডিসেম্বর'];
+const DAYS_BN   = ['রবি','সোম','মঙ্গল','বুধ','বৃহঃ','শুক্র','শনি'];
+const SLOTS     = ['সকাল ১০:০০','সকাল ১১:০০','দুপুর ১২:০০','দুপুর ২:০০',
+                   'বিকাল ৩:০০','বিকাল ৪:০০','বিকাল ৫:০০','সন্ধ্যা ৬:০০'];
+
+const calGrid     = document.getElementById('calGrid');
+const calTitle    = document.getElementById('calTitle');
+const calDayNames = document.getElementById('calDayNames');
+const slotGrid    = document.getElementById('slotGrid');
+const bookSummary = document.getElementById('bookSummary');
+const prevBtn     = document.getElementById('prevMonth');
+const nextBtn     = document.getElementById('nextMonth');
+
+const today = new Date(); today.setHours(0,0,0,0);
+let viewDate     = new Date(today.getFullYear(), today.getMonth(), 1);
+let selectedDate = null;
+let selectedSlot = null;
+
+/* render day-name header */
+calDayNames.innerHTML = DAYS_BN.map(d => `<span>${d}</span>`).join('');
+
+/* render calendar */
+function renderCalendar() {
+  calGrid.innerHTML = '';
+  calTitle.textContent = MONTHS_BN[viewDate.getMonth()] + ' ' + toBn(viewDate.getFullYear());
+
+  const year  = viewDate.getFullYear();
+  const month = viewDate.getMonth();
+  const startDay    = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  // disable prev if we're at current month
+  const isCurrentMonth = (year === today.getFullYear() && month === today.getMonth());
+  prevBtn.disabled = isCurrentMonth;
+
+  // empty leading cells
+  for (let i = 0; i < startDay; i++) {
+    const blank = document.createElement('button');
+    blank.type = 'button';
+    blank.className = 'empty';
+    blank.disabled = true;
+    calGrid.appendChild(blank);
+  }
+
+  // days
+  for (let d = 1; d <= daysInMonth; d++) {
+    const date = new Date(year, month, d);
+    const btn  = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = toBn(d);
+
+    const isPast    = date < today;
+    const isFriday  = date.getDay() === 5;   // শুক্রবার বন্ধ
+
+    if (isPast || isFriday) {
+      btn.disabled = true;
+      if (isFriday) btn.title = 'শুক্রবার বন্ধ';
+    }
+
+    if (selectedDate && date.getTime() === selectedDate.getTime()) {
+      btn.classList.add('sel');
+    }
+
+    btn.addEventListener('click', () => {
+      selectedDate = date;
+      renderCalendar();
+      updateSummary();
+    });
+
+    calGrid.appendChild(btn);
+  }
+}
+
+/* month navigation */
+prevBtn.addEventListener('click', () => {
+  viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth() - 1, 1);
+  renderCalendar();
+});
+nextBtn.addEventListener('click', () => {
+  viewDate = new Date(viewDate.getFullYear(), viewDate.getMonth() + 1, 1);
+  renderCalendar();
+});
+
+/* render time slots */
+function renderSlots() {
+  slotGrid.innerHTML = '';
+  SLOTS.forEach(s => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'slot';
+    b.textContent = s;
+    if (selectedSlot === s) b.classList.add('sel');
+    b.addEventListener('click', () => {
+      selectedSlot = s;
+      renderSlots();
+      updateSummary();
+    });
+    slotGrid.appendChild(b);
+  });
+}
+
+/* summary line */
+function updateSummary() {
+  const parts = [];
+  if (selectedDate) {
+    parts.push(`<span><i class="fa-regular fa-calendar-check"></i>
+      ${toBn(selectedDate.getDate())} ${MONTHS_BN[selectedDate.getMonth()]}, ${toBn(selectedDate.getFullYear())}</span>`);
+  }
+  if (selectedSlot) {
+    parts.push(`<span><i class="fa-regular fa-clock"></i> ${selectedSlot}</span>`);
+  }
+  bookSummary.innerHTML = parts.length
+    ? parts.join('')
+    : `<span class="empty-note">📌 এখনো কোনো তারিখ ও সময় নির্বাচন করা হয়নি</span>`;
+}
+
+/* init */
+renderCalendar();
+renderSlots();
+updateSummary();
+
+/* ============================================================
+   FORM → WHATSAPP
+============================================================ */
+const bookForm = document.getElementById('bookForm');
+
+bookForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name    = document.getElementById('bkName').value.trim();
+  const phone   = document.getElementById('bkPhone').value.trim();
+  const service = document.getElementById('bkService').value;
+  const extra   = document.getElementById('bkMsg').value.trim();
+
+  if (!name || !phone) {
+    alert('অনুগ্রহ করে আপনার নাম ও মোবাইল নম্বর দিন।');
+    return;
+  }
+  if (!selectedDate || !selectedSlot) {
+    alert('অনুগ্রহ করে ক্যালেন্ডার থেকে তারিখ ও সময় নির্বাচন করুন।');
+    return;
+  }
+
+  const dateStr =
+    `${toBn(selectedDate.getDate())} ${MONTHS_BN[selectedDate.getMonth()]}, ${toBn(selectedDate.getFullYear())}`;
+
+  const message =
+`আসসালামু আলাইকুম, ঢাকা ল ফার্ম।
+
+আমি ফ্রি কনসালটেশন বুক করতে চাই।
+
+👤 নাম: ${name}
+📱 মোবাইল: ${phone}
+⚖️ সেবা: ${service}
+📅 তারিখ: ${dateStr}
+🕐 সময়: ${selectedSlot}${extra ? `\n📝 বার্তা: ${extra}` : ''}`;
+
+  const waURL = 'https://wa.me/8801640900005?text=' + encodeURIComponent(message);
+  window.open(waURL, '_blank');
+});
+</script>
+
+</body>
+</html>
